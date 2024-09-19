@@ -8,10 +8,12 @@ import TrackVisibility from "react-on-screen";
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [" a Software Engineer", " an Embedded Engineer"]
+    const toRotate = [" Software Developer", " Software Engineer", "n Embedded Software Engineer"]
 
     const [text, setText] = useState("");
-    const [delta, setDelta] = useState(300 - Math.random() * 100);
+    // const [delta, setDelta] = useState(300 - Math.random() * 100);
+    const [delta, setDelta] = useState(200);
+
     const period = 2000;
 
     useEffect(() => {
@@ -30,7 +32,8 @@ export const Banner = () => {
         setText(updatedText);
 
         if (isDeleting) {
-            setDelta(prevDelta => prevDelta / 2)
+            // setDelta(prevDelta => prevDelta / 2)
+            setDelta(100)
         }
 
         if (!isDeleting && updatedText === fullText) {
@@ -39,7 +42,7 @@ export const Banner = () => {
         } else if (isDeleting && updatedText === "") {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            setDelta(500);
+            setDelta(200);
         } 
 
     }
@@ -55,8 +58,10 @@ export const Banner = () => {
                         {({ isVisible }) =>
                         <div className={isVisible ? "animate__animated animate__fadein" : ""}>
                         <span className="tagline">Welcome to my Portfolio!</span>
-                        <h1>{"Hi I'm"}<span className="wrap"></span>{text}</h1>
-                        <p>Hi there, I am a recent graduate from UC Santa Cruz with a B.S. in Computer Engineering.</p>
+                        <h1>{"Hi, I'm a"}<span className="wrap"></span>{text}</h1>
+                        <p> Hi there, I'm a recent Computer Engineering graduate from UC Santa Cruz with a strong foundation in software 
+                            development and a passion for creating innovative solutions. Skilled in various programming languages and 
+                            frameworks, I am eager to leverage my technical expertise and collaborative mindset to contribute to impactful projects.</p>
                         <button onClick={() => console.log("Connect")}>Let's Connect!<ArrowRightCircle size={25}/></button>
                         </div>}
                         </TrackVisibility>
