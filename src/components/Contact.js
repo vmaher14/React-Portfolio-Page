@@ -26,6 +26,7 @@ export const Contact = () => {
         e.preventDefault();
         setButtonText('Sending...');
         // Update fetch link once landing page is hosted
+        console.log("here");
         let response = await fetch("http://localhost:5000/contact", {
             method: "POST",
             headers: {
