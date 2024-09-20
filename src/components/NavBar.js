@@ -53,7 +53,7 @@ export const NavBar = () => {
                                 e.preventDefault();
                                 onUpdateActiveLink('skills');
                                 const element = document.getElementById('skills');
-                                const yOffset = -400; // Adjust this value to control how far above the section it stops
+                                const yOffset = -300; // Adjust this value to control how far above the section it stops
                                 const yPosition = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
                                 window.scrollTo({ top: yPosition, behavior: 'smooth' });
                             }}>Skills</Nav.Link>

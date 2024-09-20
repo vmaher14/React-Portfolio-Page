@@ -1,9 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import meter1 from "../assets/img/4YearMeter.svg";
+import meter2 from "../assets/img/3YearMeter.svg";
+import meter3 from "../assets/img/2YearMeter.svg";
+import meter4 from "..//assets/img/1YearMeter.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 import 'animate.css';
 import TrackVisibility from "react-on-screen";
@@ -50,11 +51,19 @@ export const Skills = () => {
                                 </div>
                                 <div className="item">
                                     <img src={meter2} alt="Image"/>
-                                    <h5>C/C++/C#</h5>
+                                    <h5>C/C++</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter3} alt="Image"/>
                                     <h5>JavaScript/HTML/CSS</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter4} alt="Image"/>
+                                    <h5>C#</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter3} alt="Image"/>
+                                    <h5>Scrum/Agile</h5>
                                 </div>
                             </Carousel>          
                         </div>
