@@ -344,6 +344,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-weight: 700;
   text-align: center;
 }
+.xp-bx-1 {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  /* margin-right: 300px;
+  margin-left: 300px; */
+  margin: 0 300px 0 300px;
+}
+.xp-bx-2 {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+}
+
+
 
 /* Skills CSS */
 .skill {
