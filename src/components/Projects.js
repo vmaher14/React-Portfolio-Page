@@ -1,41 +1,44 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/beatboxmain.png";
+import projImg2 from "../assets/img/beatboxfilled.png";
+import projImg3 from "../assets/img/beatboxplay.png";
 import 'animate.css';
 import TrackVisibility from "react-on-screen";
+import githubIcon from "../assets/img/github-mark-white.svg";
 
 
 export const Projects = () => {
     
-    const projects = [
+    const project1 = [
         {
-            title: "Project 1",
-            description: "Description of Project 1",
+            title: "Landing Page",
+            description: "What you are greeted with when you first visit the web page",
             imgUrl: projImg1,
         },
         {
-            title: "Project 2",
-            description: "Description of Project 2",
+            title: "Notes filled in",
+            description: "When you select a note to be played, it turns",
             imgUrl: projImg2,
         },
         {
-            title: "Project 3",
-            description: "Description of Project 3",
+            title: "Notes being played",
+            description: "Notes will turn red as they are being played",
             imgUrl: projImg3,
         },
-        // {
-        //     title: "Project 4",
-        //     description: "Description of Project 4",
-        //     imgUrl: projImg4,
-        // },
-        // {
-        //     title: "Project 5",
-        //     description: "Description of Project 5",
-        //     imgUrl: projImg5,
-        // },
+
+    ];
+    const project2 = [
+
+    ];
+    const project3 = [
+
+    ];
+    const project4 = [
+    
+    ];
+    const project5 = [
 
     ];
     
@@ -71,20 +74,103 @@ export const Projects = () => {
                             </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
+                                <div className="proj-desc">
+                                    <span>
+                                    A drum sequencer web application that allows you to make beats, upload custom sounds,
+                                    and download a lossless audio file that you can use wherever and whenever
+                                    </span>
+                                </div>
                                 <Row>
                                     {
-                                        projects.map((project, index) => {
+                                        project1.map((project, index) => {
                                             return (
                                                 <ProjectCard key={index} {...project}/>
                                             )
                                         })
                                     }
                                 </Row>
+                                <div className="social-icon">
+                                    <a href="https://vmaher14.github.io/BeatBox/" target="_blank"><img src={githubIcon} alt=""/></a>
+                                </div>
                             </Tab.Pane>
-                            <Tab.Pane eventKey="second">ip ip ip</Tab.Pane>
-                            <Tab.Pane eventKey="third">ip ip ip</Tab.Pane>
-                            <Tab.Pane eventKey="fourth">ip ip ip</Tab.Pane>
-                            <Tab.Pane eventKey="fifth">ip ip ip</Tab.Pane>
+                            <Tab.Pane eventKey="second">
+                                <div className="proj-desc">
+                                    <span>
+                                    A bot that uses the Monte Carlo Tree Search algorithm to play ultimate tic-tac-toe
+                                    </span>
+                                </div>
+                                <Row>
+                                    {
+                                        project2.map((project, index) => {
+                                            return (
+                                                <ProjectCard key={index} {...project}/>
+                                            )
+                                        })
+                                    }
+                                </Row>
+                                <div className="social-icon">
+                                    <a href="https://github.com/vmaher14/MCTS-Ultimate-Tic-Tac-Toe" target="_blank"><img src={githubIcon} alt=""/></a>
+                                </div>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="third">
+                                <div className="proj-desc">
+                                    <span>
+                                    A minimal Linux container in C utilizing the clone() system call to create isolated namespaces
+                                    </span>
+                                </div>
+                                <Row>
+                                    {
+                                        project3.map((project, index) => {
+                                            return (
+                                                <ProjectCard key={index} {...project}/>
+                                            )
+                                        })
+                                    }
+                                </Row>
+                                <div className="social-icon">
+                                    <a href="https://github.com/vmaher14/Personal-Container" target="_blank"><img src={githubIcon} alt=""/></a>
+                                </div>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="fourth">
+                                <div className="proj-desc">
+                                    <span>
+                                    A program on ESP32-C3 to decipher Morse code sent via an LED connected to a
+                                    Raspberry Pi 4 using GPIO and received by a photodiode on an ADC channel
+                                    </span>
+                                </div>
+                                <Row>
+                                    {
+                                        project4.map((project, index) => {
+                                            return (
+                                                <ProjectCard key={index} {...project}/>
+                                            )
+                                        })
+                                    }
+                                </Row>
+                                <div className="social-icon">
+                                    <a href="https://github.com/vmaher14/Morse-Code-Decipherer" target="_blank"><img src={githubIcon} alt=""/></a>
+                                </div>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="fifth">
+                                <div className="proj-desc">
+                                    <span>
+                                    Created a BLE HID device on the ESP32-C3 that simulates mouse movements using data
+                                    from an IC-42670-P accelerometer via I2C
+                                    </span>
+                                </div>
+                                <Row>
+                                    {
+                                        project5.map((project, index) => {
+                                            return (
+                                                <ProjectCard key={index} {...project}/>
+                                            )
+                                        })
+                                    }
+                                </Row>
+                                <div className="social-icon">
+                                    <a href="https://github.com/vmaher14/Bluetooth-Mouse" target="_blank"><img src={githubIcon} alt=""/></a>
+                                </div>
+                            </Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
                     </Col>

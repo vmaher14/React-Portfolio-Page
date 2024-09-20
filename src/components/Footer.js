@@ -9,14 +9,14 @@ export const Footer = () => {
         <footer className="footer">
             <Container>
                 <Row className="align-item-center">
-                    <Col></Col>
+                    {/* <Col>                    </Col> */}
                     <Col sm={6} className="text-center text-sm-end">
                         <div className="social-icon">
                             <a href="https://www.linkedin.com/in/victormaher/" target="_blank"><img src={navIcon1} alt=""/></a>
                             <a href="https://github.com/vmaher14" target="_blank"><img src={navIcon2} alt=""/></a>
                             <a href="https://x.com/VJMaher14" target="_blank"><img src={navIcon3} alt=""/></a>
                         </div>
-                        <p>A React-based website portfolio for Victor Maher by Victor Maher</p>
+                        <p>A React-based website portfolio</p>
                     </Col>
                 </Row>
             </Container>
