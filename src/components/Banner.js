@@ -4,6 +4,9 @@ import headerImg from "../assets/img/pfp2.jpg";
 import { useState, useEffect } from "react";
 import 'animate.css';
 import TrackVisibility from "react-on-screen";
+import { HashLink } from "react-router-hash-link";
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -49,31 +52,35 @@ export const Banner = () => {
 
 
     return (
-        <section className="banner" id="home">
-            <Container>
-                <Row className="align-items-center">
-                    
-                    <Col xs={12} md={6} xl={7}>
-                        <TrackVisibility>
-                        {({ isVisible }) =>
-                        <div className={isVisible ? "animate__animated animate__fadein" : ""}>
-                        <span className="tagline">Welcome to my Portfolio!</span>
-                        <h1>{"Hi, I'm a"}<span className="wrap"></span>{text}</h1>
-                        <p> Hi there, I'm a recent Computer Engineering graduate from UC Santa Cruz with a strong foundation in software 
-                            development and a passion for creating innovative solutions. Skilled in various programming languages and 
-                            frameworks, I am eager to leverage my technical expertise and collaborative mindset to contribute to impactful projects.</p>
-                        <button onClick={() => console.log("Connect")}>Let's Connect!<ArrowRightCircle size={25}/></button>
-                        </div>}
-                        </TrackVisibility>
-                    </Col>
+        <Router>
+            <section className="banner" id="home">
+                <Container>
+                    <Row className="align-items-center">
+                        
+                        <Col xs={12} md={6} xl={7}>
+                            <TrackVisibility>
+                            {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__fadein" : ""}>
+                            <span className="tagline">Welcome to my Portfolio!</span>
+                            <h1>{"Hi, I'm a"}<span className="wrap"></span>{text}</h1>
+                            <p> Hi there, I'm a recent Computer Engineering graduate from UC Santa Cruz with a strong foundation in software 
+                                development and a passion for creating innovative solutions. Skilled in various programming languages and 
+                                frameworks, I am eager to leverage my technical expertise and collaborative mindset to contribute to impactful projects.</p>
+                            <HashLink to="#connect">
+                                <button>Let's Connect!<ArrowRightCircle size={25}/></button>
+                            </HashLink> 
+                            </div>}
+                            </TrackVisibility>
+                        </Col>
 
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Img"></img>
-                    </Col>
+                        <Col xs={12} md={6} xl={5}>
+                            <img src={headerImg} alt="Header Img"></img>
+                        </Col>
 
-                </Row>
-            </Container>
+                    </Row>
+                </Container>
 
-        </section>
+            </section>
+        </Router>
     )
 }
