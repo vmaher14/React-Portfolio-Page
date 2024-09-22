@@ -7,16 +7,12 @@ const nodemailer = require("nodemailer");
   
 
 // server used to send send emails
+const PORT = process.env.PORT || 5000;
 const app = express();
-// const corsOptions = {
-//     origin: "http://localhost:3000",
-//     optionsSuccessStatus: 200
-//   };
-//   app.use(cors(corsOptions));
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
