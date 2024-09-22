@@ -38,11 +38,7 @@ export const Experience = () => {
                             <img src={seechange} alt="Image"/>
                             <h3>Software Developer Intern</h3>
                             <h5 className="scndate">Jan 2024 - June 2024</h5>
-                            <h5>SeeChangeNow</h5>
-                            
-
-                            
-                            
+                            <h5>SeeChangeNow</h5>                          
                             <ul id="bullet-list">
                                 {xp1Tasks.map((task, index) => (
                                     <li key={index}>{task}</li>

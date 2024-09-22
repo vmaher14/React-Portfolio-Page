@@ -4,6 +4,11 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/beatboxmain.png";
 import projImg2 from "../assets/img/beatboxfilled.png";
 import projImg3 from "../assets/img/beatboxplay.png";
+import projImg4 from "../assets/img/MCTSscore.png";
+import projImg5 from "../assets/img/uct.png";
+import projImg6 from "../assets/img/partialexpand.png";
+import projImg7 from "../assets/img/containerss.png";
+import projImg8 from "../assets/img/MorseCode.JPG";
 import 'animate.css';
 import TrackVisibility from "react-on-screen";
 import githubIcon from "../assets/img/github-mark-white.svg";
@@ -30,12 +35,38 @@ export const Projects = () => {
 
     ];
     const project2 = [
-
+        {
+            title: "",
+            description: "Modified bot beats Vanilla bot 10/10 times",
+            imgUrl: projImg4,
+        },
+        {
+            title: "",
+            description: "Modified algorithm uses Upper Confidence bounds applied to Trees",
+            imgUrl: projImg5,
+            name: "projImg5",
+        },
+        {
+            title: "",
+            description: "Modified algorithm applies partial expansion with the UCT",
+            imgUrl: projImg6,
+        },
     ];
     const project3 = [
+        {
+            title: "",
+            description: "After initializing container and viewing current processes",
+            imgUrl: projImg7,
+            name: "projImg7"
+        }
 
     ];
     const project4 = [
+        {
+            title: "",
+            description: "Led connected to raspberry PI and photodiode connected to esp32-c3",
+            imgUrl: projImg8,
+        }
     
     ];
     const project5 = [
